@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report Issues - Sunabeda.com</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+    </header>
+
+    <section class="issues-section">
+      <div class="container">
+        <h2>Report Community Issues</h2>
+        <p>
+          Help us maintain our township by reporting any issues you encounter
+        </p>
+
+        <form id="issueForm">
+          <div class="form-group">
+            <label for="issue-type">Issue Type</label>
+            <select id="issue-type" name="issue-type" required>
+              <option value="">Select issue type</option>
+              <option value="water-supply">Water Supply</option>
+              <option value="electricity">Electricity</option>
+              <option value="cleanliness">Cleanliness</option>
+              <option value="water-towel">Water Towel</option>
+              <option value="street-light">Street Light</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="location">Location (Block/Zone)</label>
+            <input type="text" id="location" name="location" required />
+          </div>
+
+          <div class="form-group">
+            <label for="description">Detailed Description</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              required
+              placeholder="Please describe the issue in detail..."
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="photo">Upload Photo (Optional)</label>
+            <input type="file" id="photo" name="photo" accept="image/*" />
+          </div>
+
+          <button type="submit" class="btn">Submit Report</button>
+        </form>
+
+        <div class="recent-issues">
+          <h3>Your Recent Issues</h3>
+          <div class="issues-list" id="issuesList">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+      const sampleIssues = [
+        {
+          type: "Water Supply",
+          location: "Block C, Zone B",
+          description: "No water supply since yesterday morning",
+          status: "In Progress",
+          date: "15 Nov 2023",
+        },
+        {
+          type: "Electricity",
+          location: "Block A, Zone D",
+          description: "Power fluctuation issues",
+          status: "Resolved",
+          date: "10 Nov 2023",
+        },
+      ];
+      function renderIssues() {
+        const issuesList = document.getElementById("issuesList");
+        issuesList.innerHTML = "";
+
+        sampleIssues.forEach((issue) => {
+          const issueElement = document.createElement("div");
+          issueElement.className = "issue-card";
+          issueElement.innerHTML = `
+                    <div class="issue-header">
+                        <span class="issue-type">${issue.type}</span>
+                        <span class="issue-status ${issue.status
+                          .toLowerCase()
+                          .replace(" ", "-")}">${issue.status}</span>
+                    </div>
+                    <p class="issue-location">${issue.location}</p>
+                    <p class="issue-desc">${issue.description}</p>
+                    <p class="issue-date">Reported on: ${issue.date}</p>
+                `;
+          issuesList.appendChild(issueElement);
+        });
+      }
+      document.addEventListener("DOMContentLoaded", renderIssues);
+    </script>
+  </body>
+</html>

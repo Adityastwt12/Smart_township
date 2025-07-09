@@ -1,0 +1,141 @@
+
+/* utilities.css */
+.utilities-section {
+    padding: 80px 0;
+}
+
+.utilities-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--dark-color);
+    font-size: 2.5rem;
+}
+
+.utilities-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    background: #eee;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.contact-category {
+    margin-bottom: 30px;
+}
+
+.contact-category h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.contact-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card h4 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.contact-card p {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-card i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.contact-card .phone {
+    font-weight: 600;
+    color: var(--dark-color);
+    cursor: pointer;
+}
+
+.contact-card .phone:hover {
+    color: var(--primary-color);
+}
+
+.timing-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.timing-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.timing-card h4 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.timing-card p {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .utilities-tabs {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+    }
+    
+    .contact-list {
+        grid-template-columns: 1fr;
+    }
+}

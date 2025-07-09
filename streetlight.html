@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Street Light Analytics - Sunabeda.com</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="main-header">
+    </header>
+
+    <section class="analytics-section">
+      <div class="container">
+        <h2>Street Light Predictive Maintenance</h2>
+        <p>AI-powered monitoring for optimal street light performance</p>
+
+        <div class="predictive-maintenance">
+          <h3>Fault Prediction System</h3>
+          <form id="predictForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="temperature">Temperature (°C)</label>
+                <input
+                  type="number"
+                  id="temperature"
+                  name="temperature"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="vibration">Vibration (Hz)</label>
+                <input
+                  type="number"
+                  id="vibration"
+                  name="vibration"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="usage-hours">Usage Hours</label>
+                <input
+                  type="number"
+                  id="usage-hours"
+                  name="usage-hours"
+                  required
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn">Predict Fault</button>
+          </form>
+          <div class="prediction-result">
+            <h4>Prediction Result:</h4>
+            <p id="predictionOutput">Enter parameters to get prediction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="scripts.js"></script>
+    <script>
+    </script>
+  </body>
+</html>

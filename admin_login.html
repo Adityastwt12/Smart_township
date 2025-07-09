@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login | Sunabeda.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Sunabeda.com</h1>
+                <p>Hindustan Aeronautics Limited, Koraput Division</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resident_login.html">Resident Login</a></li>
+                    <li><a href="admin_login.html" class="active">Admin Login</a></li>
+                    <li><a href="issues.html">Report Issues</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="login-section">
+        <div class="container">
+            <div class="login-form">
+                <h2><i class="fas fa-user-shield"></i> Admin Login</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="username"><i class="fas fa-user-tie"></i> Username</label>
+                        <input type="text" id="username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password"><i class="fas fa-lock"></i> Password</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-group">
+                        <label for="otp"><i class="fas fa-mobile-alt"></i> OTP (Optional)</label>
+                        <input type="text" id="otp" placeholder="Enter OTP if enabled">
+                    </div>
+                    <button type="submit" class="btn admin-login-btn">Login</button>
+                </form>
+                <div class="login-links">
+                    <p><a href="#"><i class="fas fa-key"></i> Forgot credentials?</a></p>
+                    <p><a href="#"><i class="fas fa-envelope"></i> Request admin access</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Sunabeda.com</h3>
+                    <p>Smart Predictive Maintenance Township</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resident_login.html">Resident Login</a></li>
+                        <li><a href="admin_login.html">Admin Login</a></li>
+                        <li><a href="issues.html">Report Issues</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> Hindustan Aeronautics Limited, Koraput Division, Sunabeda-2, Koraput, Odisha, PIN: 763002
+                    </p>
+                    <p><i class="fas fa-phone"></i> +91 9876543210</p>
+                    <p><i class="fas fa-envelope"></i> contact@sunabeda.com</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Sunabeda.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
