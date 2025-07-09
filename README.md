@@ -1,2 +1,2 @@
 # HAL-township
-HAL Smart Township 
+HAL Smart Township.
